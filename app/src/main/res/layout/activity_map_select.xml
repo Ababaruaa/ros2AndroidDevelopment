@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="地图选择页面"
+        android:textColor="#FF0000"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+    <!-- 视觉部分 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:drawable/dialog_holo_light_frame">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="机器人视觉内容" android:layout_centerInParent="true" />
+        <Button android:layout_width="50dp" android:layout_height="35dp" android:text="声音" android:textSize="10sp" android:layout_alignParentBottom="true" android:layout_margin="5dp"/>
+        <Button android:layout_width="50dp" android:layout_height="35dp" android:text="全屏" android:textSize="10sp" android:layout_alignParentBottom="true" android:layout_alignParentRight="true" android:layout_margin="5dp"/>
+    </RelativeLayout>
+
+    <!-- 工具栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="话筒" android:textSize="10sp"/>
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="拍照" android:textSize="10sp"/>
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="遥控" android:textSize="10sp"/>
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="建图" android:textSize="10sp"/>
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="地图X" android:textSize="10sp"/>
+    </LinearLayout>
+
+    <!-- SLAM 地图与点位 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@android:drawable/dialog_holo_light_frame">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SLAM地图" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@android:drawable/editbox_background">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="原点1\n点位2\n点位3\n点位4\n..." android:padding="5dp" android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回原点"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="主页面1"
+        android:textColor="#FF0000"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+    <!-- 视觉内容区 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/dialog_holo_light_frame">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="机器人视觉内容"
+            android:layout_centerInParent="true" />
+        <Button android:layout_width="60dp" android:layout_height="40dp" android:text="声音" android:layout_alignParentBottom="true" android:layout_margin="10dp"/>
+        <Button android:layout_width="60dp" android:layout_height="40dp" android:text="全屏" android:layout_alignParentBottom="true" android:layout_alignParentRight="true" android:layout_margin="10dp"/>
+    </RelativeLayout>
+
+    <!-- 中间工具栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="话筒" android:textSize="12sp"/>
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="拍照" android:textSize="12sp"/>
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="遥控" android:textSize="12sp"/>
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="建图" android:textSize="12sp"/>
+        <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="地图1" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- 下方控制区 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回原点"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
+
+        <!-- 摇杆/方向键占位 -->
+        <View
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@android:drawable/presence_online"
+            android:layout_centerInParent="true" />
+
+        <!-- 右侧点位列表 -->
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:background="@android:drawable/editbox_background">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="原点1\n点位2\n点位3\n点位4" android:padding="5dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

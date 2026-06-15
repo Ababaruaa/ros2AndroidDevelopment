@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="建图页面"
+        android:textColor="#FF0000"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+    <!-- SLAM地图区 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/dialog_holo_light_frame">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SLAM地图、建图"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- 地图选择列表 (水平滚动) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地图1" android:textSize="10sp"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地图2" android:textSize="10sp"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地图3" android:textSize="10sp"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地图4" android:textSize="10sp"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地图5" android:textSize="10sp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- 下方操作区 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="点位设定" android:textSize="12sp"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="安全墙" android:textSize="12sp"/>
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存地图" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+            <View android:layout_width="80dp" android:layout_height="80dp" android:background="@android:drawable/presence_online" />
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="重新建图" android:textSize="12sp" android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:background="@android:drawable/editbox_background">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="原点1\n点位2\n点位3\n点位4" android:padding="5dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
